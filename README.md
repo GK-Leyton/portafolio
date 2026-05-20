@@ -1,36 +1,134 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Heider Leyton — Portafolio
 
-## Getting Started
+Portafolio personal de **Heider Sait Leyton Montiel**, desarrollador Full Stack basado en Bogotá, Colombia.
 
-First, run the development server:
+> Sitio construido con Next.js 16, TypeScript y Tailwind CSS v4. Diseño minimalista con dark/light mode, animaciones sutiles y formulario de contacto funcional.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Stack técnico
+
+- **Framework:** [Next.js 16](https://nextjs.org) (App Router + Turbopack)
+- **Lenguaje:** TypeScript
+- **Estilos:** [Tailwind CSS v4](https://tailwindcss.com) con variante `light:` custom
+- **Fuentes:** Geist Sans, Geist Mono, Instrument Serif (via `next/font`)
+- **Iconos:** [Lucide React](https://lucide.dev) + SVGs inline para marcas
+- **Email:** [Nodemailer](https://nodemailer.com) con Gmail SMTP
+
+---
+
+## Secciones
+
+- **Hero** — Presentación con CodeCard estilo terminal y syntax highlighting
+- **Sobre mí** — Bio, monograma, datos rápidos y formación
+- **Proyectos** — Grid con filtros por categoría (Empresarial, Personal, Académico, Proyecto de grado)
+- **Stack** — Tecnologías por categoría + marquee animado
+- **Experiencia** — Timeline laboral
+- **Contacto** — Formulario con validación cliente + envío vía Nodemailer
+- **Dark/Light mode** — Persistido en localStorage
+
+---
+
+## Estructura
+
+```
+portafolio/
+├── app/
+│   ├── api/contact/route.ts    # Endpoint del formulario
+│   ├── globals.css             # Estilos custom y animaciones
+│   ├── layout.tsx              # Layout raíz con fuentes
+│   ├── page.tsx                # Composición de secciones
+│   └── theme-provider.tsx      # Context para dark/light
+├── components/
+│   ├── Nav.tsx                 # Navegación con scroll spy
+│   ├── Hero.tsx                # Sección principal
+│   ├── CodeCard.tsx            # Terminal con código tokenizado
+│   ├── About.tsx
+│   ├── Projects.tsx            # Con filtros por tag
+│   ├── Stack.tsx               # + Marquee
+│   ├── Experience.tsx          # Timeline
+│   ├── Contact.tsx             # Form + info directa
+│   ├── Footer.tsx
+│   ├── Section.tsx             # Wrapper reutilizable
+│   ├── Chip.tsx                # Tags de tecnologías
+│   └── BrandIcons.tsx          # GitHub / LinkedIn SVG
+└── lib/
+    └── data.ts                 # Datos del portafolio (tipados)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Desarrollo local
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Requisitos
 
-## Learn More
+- Node.js 18.18+ o 20+
+- npm
 
-To learn more about Next.js, take a look at the following resources:
+### Instalación
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+git clone https://github.com/GK-Leyton/portafolio.git
+cd portafolio
+npm install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Variables de entorno
 
-## Deploy on Vercel
+Crea un archivo `.env.local` en la raíz:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```env
+EMAIL_USER=tu_correo@gmail.com
+EMAIL_PASSWORD=tu_app_password_de_16_caracteres
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> La contraseña debe ser una **App Password** de Google (con 2FA activado).
+> Obtenerla en: https://myaccount.google.com/apppasswords
+
+Si no configuras estas variables, el formulario funciona pero no envía correos (solo loguea en consola).
+
+### Scripts disponibles
+
+| Comando | Descripción |
+|---------|-------------|
+| `npm run dev` | Servidor de desarrollo en `http://localhost:3000` |
+| `npm run dev:network` | Servidor accesible desde la red local |
+| `npm run build` | Build de producción |
+| `npm run start` | Ejecutar el build de producción |
+| `npm run lint` | Análisis estático con ESLint |
+
+---
+
+## Personalización
+
+Toda la información del portafolio vive en un solo archivo:
+
+```
+lib/data.ts
+```
+
+Allí están: nombre, contacto, pitch, stats, experiencias, proyectos, stack y formación. Editar este archivo actualiza todo el sitio.
+
+---
+
+## Deploy
+
+El sitio está pensado para desplegar en [Vercel](https://vercel.com):
+
+1. Importa el repo en Vercel.
+2. Agrega las variables `EMAIL_USER` y `EMAIL_PASSWORD` en *Project Settings → Environment Variables*.
+3. Deploy.
+
+---
+
+## Contacto
+
+- **Email:** heiderleyton22@gmail.com
+- **LinkedIn:** [heider-sait-leyton-montiel](https://linkedin.com/in/heider-sait-leyton-montiel)
+- **GitHub:** [@GK-Leyton](https://github.com/GK-Leyton)
+
+---
+
+## Licencia
+
+Código abierto bajo licencia MIT. Siéntete libre de usar la estructura como base — solo no copies los contenidos personales.
