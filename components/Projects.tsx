@@ -53,7 +53,7 @@ export default function Projects() {
         {filtered.map((p, i) => (
           <article
             key={p.title}
-            className="lift group relative overflow-hidden rounded-2xl border border-zinc-900 bg-zinc-950/50 p-7 hover:border-zinc-800 hover:bg-zinc-950/80 light:border-zinc-200 light:bg-white light:hover:border-zinc-300"
+            className="lift group relative overflow-hidden rounded-2xl border border-zinc-900 bg-zinc-950/50 p-7 hover:border-zinc-800 hover:bg-zinc-950/80 light:border-zinc-200 light:bg-white light:hover:border-zinc-300 light:hover:bg-zinc-50"
           >
             {/* Index + tag */}
             <div className="flex items-start justify-between gap-4">

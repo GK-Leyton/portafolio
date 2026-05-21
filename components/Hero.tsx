@@ -65,7 +65,7 @@ export default function Hero() {
             </a>
             <a
               href="#proyectos"
-              className="inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/40 px-5 py-3 text-sm font-medium text-zinc-200 transition hover:border-zinc-700 hover:bg-zinc-900/70 light:border-zinc-200 light:bg-white light:text-zinc-800 light:hover:border-zinc-300"
+              className="inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/40 px-5 py-3 text-sm font-medium text-zinc-200 transition hover:border-zinc-700 hover:bg-zinc-900/70 light:border-zinc-200 light:bg-white light:text-zinc-800 light:hover:border-zinc-300 light:hover:bg-zinc-50"
             >
               Ver proyectos
             </a>
