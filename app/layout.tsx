@@ -26,6 +26,24 @@ export const metadata: Metadata = {
     "Portafolio de Heider Sait Leyton Montiel. Desarrollador Full Stack especializado en Laravel, Next.js, Flutter y APIs REST.",
 };
 
+// Script que se ejecuta antes del render para evitar el flash de tema incorrecto
+const themeInitScript = `
+(function() {
+  try {
+    var stored = localStorage.getItem('theme');
+    var theme = stored || 'dark';
+    var root = document.documentElement;
+    if (theme === 'light') {
+      root.classList.add('light');
+      root.classList.remove('dark');
+    } else {
+      root.classList.add('dark');
+      root.classList.remove('light');
+    }
+  } catch (e) {}
+})();
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,10 +52,13 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} h-full antialiased dark`}
+      className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full bg-zinc-950 text-zinc-200">
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
+      <body className="min-h-full themed-body">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

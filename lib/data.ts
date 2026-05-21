@@ -36,7 +36,6 @@ export const DATA = {
   role: 'Full Stack Developer',
   location: 'Bogotá, Colombia',
   email: 'heiderleyton22@gmail.com',
-  phone: '+57 314 271 6310',
   github: 'https://github.com/GK-Leyton',
   linkedin: 'https://linkedin.com/in/heider-sait-leyton-montiel',
   pitch:

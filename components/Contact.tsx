@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Check, ArrowUpRight, Phone } from "lucide-react";
+import { Check, ArrowUpRight } from "lucide-react";
 import { DATA } from "@/lib/data";
 import Section from "./Section";
 import { GithubIcon, LinkedinIcon } from "./BrandIcons";
@@ -222,21 +222,6 @@ export default function Contact() {
             </div>
             <div className="mt-3 break-all text-[15px] font-medium text-zinc-100 light:text-zinc-900">
               {DATA.email}
-            </div>
-          </a>
-
-          <a
-            href={"tel:" + DATA.phone.replace(/\s/g, "")}
-            className="lift group block rounded-2xl border border-zinc-900 bg-zinc-950/40 p-6 hover:border-zinc-800 light:border-zinc-200 light:bg-white light:hover:border-zinc-300"
-          >
-            <div className="flex items-center justify-between">
-              <div className="font-mono text-[11px] uppercase tracking-[0.2em] text-zinc-500 light:text-zinc-500">
-                Teléfono
-              </div>
-              <Phone className="h-4 w-4 text-zinc-500 light:text-zinc-400" strokeWidth={1.75} />
-            </div>
-            <div className="mt-3 text-[15px] font-medium text-zinc-100 light:text-zinc-900">
-              {DATA.phone}
             </div>
           </a>
 

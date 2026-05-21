@@ -16,30 +16,26 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setThemeState] = useState<Theme>("dark");
   const [mounted, setMounted] = useState(false);
 
+  // Al montar, leer el tema actual del DOM (puesto por el script inline en <head>)
   useEffect(() => {
-    const stored = localStorage.getItem("theme") as Theme | null;
-    if (stored) {
-      setThemeState(stored);
-    }
+    const root = document.documentElement;
+    const current = root.classList.contains("light") ? "light" : "dark";
+    setThemeState(current);
     setMounted(true);
   }, []);
 
+  // Aplicar cambios al cambiar el tema (después del montaje)
   useEffect(() => {
     if (!mounted) return;
 
     const root = document.documentElement;
-    const body = document.body;
 
-    if (theme === "dark") {
+    if (theme === "light") {
+      root.classList.add("light");
+      root.classList.remove("dark");
+    } else {
       root.classList.add("dark");
       root.classList.remove("light");
-      body.classList.remove("bg-white", "text-zinc-900");
-      body.classList.add("bg-zinc-950", "text-zinc-200");
-    } else {
-      root.classList.remove("dark");
-      root.classList.add("light");
-      body.classList.remove("bg-zinc-950", "text-zinc-200");
-      body.classList.add("bg-white", "text-zinc-900");
     }
 
     localStorage.setItem("theme", theme);

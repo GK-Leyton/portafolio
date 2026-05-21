@@ -16,6 +16,18 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* Body color por tema (controlado por la clase del <html>) */
+.themed-body {
+  background-color: #09090b; /* zinc-950 */
+  color: #e4e4e7; /* zinc-200 */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html.light .themed-body {
+  background-color: #ffffff;
+  color: #18181b; /* zinc-900 */
+}
+
 @theme {
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
