@@ -152,28 +152,28 @@ export const DATA = {
   ] as StackGroup[],
   education: [
     {
-      title: 'Tecnólogo en Sistematización de Datos',
-      org: 'Universidad Distrital',
-      year: '2025',
-      status: 'Certificado',
-    },
-    {
       title: 'Ingeniería en Telemática',
       org: 'Universidad Distrital',
       year: '2026',
       status: 'En curso',
     },
     {
-      title: 'Curso completo de Flutter y Dart',
-      org: 'Udemy · 21h',
-      year: 'Oct 2025',
-      status: 'Certificado',
-    },
-    {
       title: 'Cursos de IA y LLMs',
       org: 'Anthropic',
       year: '2025',
       status: 'En progreso',
+    },
+    {
+      title: 'Tecnólogo en Sistematización de Datos',
+      org: 'Universidad Distrital',
+      year: 'Nov 2025',
+      status: 'Certificado',
+    },
+    {
+      title: 'Curso completo de Flutter y Dart',
+      org: 'Udemy · 21h',
+      year: 'Oct 2025',
+      status: 'Certificado',
     },
   ] as EducationItem[],
 };
