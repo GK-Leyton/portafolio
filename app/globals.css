@@ -28,6 +28,47 @@ html.light .themed-body {
   color: #18181b; /* zinc-900 */
 }
 
+/* ============================================================
+   Inputs con autocompletado (Chrome / Safari / Edge)
+   Por defecto el navegador aplica un fondo amarillo/azul forzado
+   en inputs autocompletados — los siguientes truqillos hacen que
+   respete los colores del tema actual.
+   ============================================================ */
+
+/* Dark mode (default) */
+.themed-input:-webkit-autofill,
+.themed-input:-webkit-autofill:hover,
+.themed-input:-webkit-autofill:focus,
+.themed-input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #09090b inset !important;
+  -webkit-text-fill-color: #f4f4f5 !important;
+  caret-color: #f4f4f5 !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* Light mode */
+html.light .themed-input:-webkit-autofill,
+html.light .themed-input:-webkit-autofill:hover,
+html.light .themed-input:-webkit-autofill:focus,
+html.light .themed-input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+  -webkit-text-fill-color: #18181b !important;
+  caret-color: #18181b !important;
+}
+
+/* Asegurar el cursor / texto seleccionado en inputs */
+.themed-input {
+  caret-color: #f4f4f5;
+}
+
+html.light .themed-input {
+  caret-color: #18181b;
+}
+
+.themed-input::selection {
+  background: rgba(167, 139, 250, 0.45);
+}
+
 @theme {
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;

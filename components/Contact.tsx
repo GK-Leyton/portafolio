@@ -69,7 +69,7 @@ export default function Contact() {
   }
 
   const inputBase =
-    "block w-full rounded-xl border bg-zinc-950/60 px-4 py-3 text-[14.5px] text-zinc-100 placeholder:text-zinc-600 outline-none transition focus:bg-zinc-950 light:bg-white light:text-zinc-900 light:placeholder:text-zinc-400";
+    "themed-input block w-full rounded-xl border bg-zinc-950/60 px-4 py-3 text-[14.5px] text-zinc-100 placeholder:text-zinc-600 outline-none transition focus:bg-zinc-950 light:bg-white light:text-zinc-900 light:placeholder:text-zinc-400 light:focus:bg-white";
 
   return (
     <Section
