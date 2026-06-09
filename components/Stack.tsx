@@ -24,7 +24,7 @@ export default function Stack() {
       title={
         <>
           Las herramientas con las que{" "}
-          <span className="font-serif italic font-normal text-zinc-400 light:text-zinc-500">
+          <span className="font-light text-zinc-400 light:text-zinc-500">
             trabajo
           </span>
           .

@@ -78,7 +78,7 @@ export default function Contact() {
       title={
         <>
           ¿Construimos{" "}
-          <span className="font-serif italic font-normal accent-text">algo</span> juntos?
+          <span className="accent-text">algo</span> juntos?
         </>
       }
       kicker="Roles full stack, proyectos freelance o solo decir hola — todo bienvenido."

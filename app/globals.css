@@ -19,14 +19,14 @@ body {
 
 /* Body color por tema (controlado por la clase del <html>) */
 .themed-body {
-  background-color: #09090b; /* zinc-950 */
-  color: #e4e4e7; /* zinc-200 */
+  background-color: #0c0a09; /* stone-950 (warm) */
+  color: #e7e5e4; /* stone-200 (warm) */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 html.light .themed-body {
-  background-color: #ffffff;
-  color: #18181b; /* zinc-900 */
+  background-color: #faf9f7; /* off-white warm */
+  color: #1c1917; /* stone-900 (warm) */
 }
 
 /* ============================================================
@@ -67,19 +67,22 @@ html.light .themed-input {
 }
 
 .themed-input::selection {
-  background: rgba(167, 139, 250, 0.45);
+  background: rgba(251, 146, 60, 0.40);
 }
 
 @theme {
   --font-sans: var(--app-font-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--app-font-mono), ui-monospace, monospace;
-  --font-serif: var(--app-font-serif), ui-serif, Georgia, serif;
 }
 
-/* Subtle dotted grid background */
+/* Subtle crosshatch pattern (editorial) */
 .dotgrid {
-  background-image: radial-gradient(currentColor 0.5px, transparent 0.5px);
-  background-size: 24px 24px;
+  background-image:
+    linear-gradient(currentColor 1px, transparent 1px),
+    linear-gradient(90deg, currentColor 1px, transparent 1px);
+  background-size: 56px 56px;
+  background-position: -1px -1px;
+  opacity: 0.5;
 }
 
 /* Caret blink */
@@ -142,23 +145,23 @@ html.light .themed-input {
   height: 1px;
 }
 
-/* Accent text gradient */
+/* Accent text gradient (warm editorial) */
 .accent-text {
-  background: linear-gradient(110deg, #a5b4fc 0%, #c4b5fd 35%, #f0abfc 70%, #fda4af 100%);
+  background: linear-gradient(110deg, #fbbf24 0%, #fb923c 40%, #f43f5e 80%, #e11d48 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 .light .accent-text {
-  background: linear-gradient(110deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%);
+  background: linear-gradient(110deg, #b45309 0%, #c2410c 40%, #be123c 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-/* Selection */
+/* Selection (warm) */
 ::selection {
-  background: rgba(167,139,250,.35);
+  background: rgba(251, 146, 60, 0.30);
   color: inherit;
 }
 
@@ -166,22 +169,22 @@ html.light .themed-input {
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { scrollbar-width: none; }
 
-/* Spotlight ambient */
+/* Spotlight ambient (warm editorial) */
 .spot {
   position: absolute;
   inset: -10%;
   background:
-    radial-gradient(40% 35% at 15% 20%, rgba(99,102,241,.18), transparent 60%),
-    radial-gradient(35% 30% at 85% 25%, rgba(217,70,239,.10), transparent 60%),
-    radial-gradient(40% 35% at 50% 95%, rgba(56,189,248,.10), transparent 60%);
+    radial-gradient(40% 35% at 15% 20%, rgba(251, 191, 36, 0.16), transparent 60%),
+    radial-gradient(35% 30% at 85% 25%, rgba(244, 63, 94, 0.10), transparent 60%),
+    radial-gradient(40% 35% at 50% 95%, rgba(251, 146, 60, 0.10), transparent 60%);
   filter: blur(20px);
   pointer-events: none;
 }
 .light .spot {
   background:
-    radial-gradient(40% 35% at 15% 20%, rgba(99,102,241,.10), transparent 60%),
-    radial-gradient(35% 30% at 85% 25%, rgba(217,70,239,.06), transparent 60%),
-    radial-gradient(40% 35% at 50% 95%, rgba(56,189,248,.06), transparent 60%);
+    radial-gradient(40% 35% at 15% 20%, rgba(251, 191, 36, 0.18), transparent 60%),
+    radial-gradient(35% 30% at 85% 25%, rgba(244, 63, 94, 0.10), transparent 60%),
+    radial-gradient(40% 35% at 50% 95%, rgba(251, 146, 60, 0.10), transparent 60%);
 }
 
 /* Scrollbar styling */

@@ -57,7 +57,7 @@ export default function Nav() {
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-6 sm:px-8">
         <a href="#inicio" className="group inline-flex items-center gap-2.5">
           <span className="relative inline-flex h-8 w-8 items-center justify-center overflow-hidden rounded-lg border border-zinc-800 bg-zinc-950/80 backdrop-blur light:border-zinc-200 light:bg-white/80">
-            <span className="font-serif text-[14px] text-zinc-100 light:text-zinc-900">HL</span>
+            <span className="text-[13px] font-bold tracking-tight text-zinc-100 light:text-zinc-900">HL</span>
           </span>
           <span className="hidden text-[13px] font-medium text-zinc-300 group-hover:text-zinc-50 sm:inline light:text-zinc-700 light:group-hover:text-zinc-900">
             heider.dev

@@ -27,10 +27,10 @@ export default function Hero() {
 
           {/* Name + role */}
           <h1 className="reveal-2 text-balance text-5xl font-semibold leading-[0.98] tracking-[-0.025em] text-zinc-50 sm:text-6xl lg:text-[5.25rem] light:text-zinc-900">
-            Heider <span className="font-serif italic font-normal accent-text">Leyton</span>
+            Heider <span className="accent-text">Leyton</span>
             <span className="block text-zinc-400 light:text-zinc-500">
               Full Stack Developer
-              <span className="text-violet-400 light:text-violet-600">.</span>
+              <span className="text-amber-500 light:text-amber-600">.</span>
             </span>
           </h1>
 
@@ -93,7 +93,7 @@ export default function Hero() {
           <div className="reveal-5 mt-14 grid max-w-lg grid-cols-3 gap-6 border-t border-zinc-900 pt-8 light:border-zinc-200">
             {DATA.stats.map((s) => (
               <div key={s.l}>
-                <div className="font-serif text-3xl tracking-tight text-zinc-50 light:text-zinc-900">
+                <div className="text-3xl font-light tracking-tight text-zinc-50 light:text-zinc-900">
                   {s.v}
                 </div>
                 <div className="mt-1 text-[12px] leading-snug text-zinc-500 light:text-zinc-500">

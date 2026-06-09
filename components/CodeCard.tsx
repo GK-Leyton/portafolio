@@ -30,7 +30,7 @@ export default function CodeCard() {
   return (
     <div className="reveal-3 relative">
       {/* ambient halo */}
-      <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[2rem] bg-gradient-to-br from-indigo-500/10 via-fuchsia-500/5 to-transparent blur-2xl" />
+      <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[2rem] bg-gradient-to-br from-amber-500/10 via-rose-500/5 to-transparent blur-2xl" />
       <div className="overflow-hidden rounded-2xl border border-zinc-800/80 bg-zinc-950/70 backdrop-blur-md shadow-[0_24px_60px_-24px_rgba(0,0,0,0.6)] light:border-zinc-200 light:bg-white">
         {/* Window chrome */}
         <div className="flex items-center justify-between border-b border-zinc-800/80 px-4 py-3 light:border-zinc-200">

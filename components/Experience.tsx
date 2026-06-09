@@ -10,7 +10,7 @@ export default function Experience() {
       title={
         <>
           Donde he{" "}
-          <span className="font-serif italic font-normal text-zinc-400 light:text-zinc-500">
+          <span className="font-light text-zinc-400 light:text-zinc-500">
             enviado código
           </span>
           .
@@ -32,7 +32,7 @@ export default function Experience() {
             {/* Node */}
             <div className="absolute left-0 top-2 flex h-[15px] w-[15px] items-center justify-center">
               <span className="absolute h-[15px] w-[15px] rounded-full border border-zinc-700 bg-zinc-950 light:border-zinc-300 light:bg-white" />
-              <span className="relative h-[5px] w-[5px] rounded-full bg-violet-400 light:bg-violet-600" />
+              <span className="relative h-[5px] w-[5px] rounded-full bg-amber-500 light:bg-amber-600" />
             </div>
 
             <div className="rounded-2xl border border-zinc-900 bg-zinc-950/40 p-7 light:border-zinc-200 light:bg-white">

@@ -10,9 +10,9 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <div className="relative overflow-x-clip">
-      {/* Background dot grid */}
-      <div className="pointer-events-none fixed inset-0 -z-10 opacity-[0.18] text-zinc-700 dotgrid light:opacity-[0.5] light:text-zinc-300" />
-      <div className="pointer-events-none fixed inset-x-0 top-0 -z-10 h-96 bg-gradient-to-b from-indigo-500/[0.07] via-fuchsia-500/[0.03] to-transparent light:from-indigo-500/[0.04] light:via-fuchsia-500/[0.02]" />
+      {/* Background crosshatch */}
+      <div className="pointer-events-none fixed inset-0 -z-10 text-stone-700/40 dotgrid light:text-stone-400/40" />
+      <div className="pointer-events-none fixed inset-x-0 top-0 -z-10 h-96 bg-gradient-to-b from-amber-500/[0.05] via-rose-500/[0.025] to-transparent light:from-amber-500/[0.06] light:via-rose-500/[0.03]" />
 
       <Nav />
       <main>

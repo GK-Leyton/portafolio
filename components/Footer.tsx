@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="relative border-t border-zinc-900 light:border-zinc-200">
       <div className="mx-auto flex w-full max-w-6xl flex-col items-start justify-between gap-6 px-6 py-10 text-[13px] sm:flex-row sm:items-center sm:px-8">
         <div className="flex items-center gap-3">
-          <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-zinc-800 bg-zinc-950 font-serif text-[13px] text-zinc-100 light:border-zinc-200 light:bg-white light:text-zinc-900">
+          <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-zinc-800 bg-zinc-950 text-[12px] font-bold tracking-tight text-zinc-100 light:border-zinc-200 light:bg-white light:text-zinc-900">
             HL
           </span>
           <span className="text-zinc-500 light:text-zinc-500">

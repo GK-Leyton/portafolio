@@ -20,7 +20,7 @@ export default function Projects() {
       title={
         <>
           Cosas que{" "}
-          <span className="font-serif italic font-normal text-zinc-400 light:text-zinc-500">
+          <span className="font-light text-zinc-400 light:text-zinc-500">
             he construido
           </span>
           .
